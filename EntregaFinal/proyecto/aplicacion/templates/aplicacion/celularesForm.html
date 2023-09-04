@@ -1,0 +1,18 @@
+{% extends 'aplicacion/base.html' %}
+{%load static %}
+
+{% block titulo %}
+    Página de Modelos de celular
+{% endblock titulo %} 
+
+{% block contenido %}
+   <h1> Celulares </h1>
+    <h2>Agregar un celular nuevo</h2>
+    <form action="" method ="post">
+        {% csrf_token %}
+        <p>Marca: <input type ="text" name ="marca" id="marca"> </p>
+        <p>Modelo: <input type ="text" name ="modelo" id="modelo"> </p>
+        <p>Precio: <input type ="number" name ="precio" id="precio"> </p>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock contenido %}

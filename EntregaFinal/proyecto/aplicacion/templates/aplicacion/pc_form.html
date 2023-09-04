@@ -1,0 +1,18 @@
+{% extends 'aplicacion/base.html' %}
+{%load static %}
+
+{% block titulo %}
+    Página de Modelos de PC
+{% endblock titulo %} 
+
+{% block contenido %}
+   <h1> PC </h1>
+    <h2>Agregar un televisor nuevo</h2>
+    <form action="" method ="post">
+        {% csrf_token %}
+       <table>
+            {{form.as_table}}
+        </table>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock contenido %}

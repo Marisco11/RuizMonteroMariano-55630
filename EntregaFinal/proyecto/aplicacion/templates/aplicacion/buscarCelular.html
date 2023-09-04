@@ -1,0 +1,16 @@
+{% extends 'aplicacion/base.html' %}
+{%load static %}
+
+{% block titulo %}
+    Buscador de Celulares
+{% endblock titulo %} 
+
+{% block contenido %}
+   <h1> Celulares </h1>
+    <h2>Buscá la marca que quieras</h2>
+    <form action="/buscar2" method ="get">
+        {% csrf_token %}
+        <p>Buscar: <input type ="text" name ="buscar" id="buscar"> </p>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock contenido %}

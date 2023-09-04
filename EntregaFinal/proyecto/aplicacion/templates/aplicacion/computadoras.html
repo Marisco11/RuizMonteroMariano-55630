@@ -1,0 +1,36 @@
+{% extends 'aplicacion/base.html' %}
+{%load static %}
+
+{% block titulo %}
+    Listado de PCs
+{% endblock titulo %} 
+
+{% block contenido %}
+<h1> Computadoras </h1>
+
+
+<table class="table table-stripped">
+     <thead>
+     <tr>
+         <th> Marca</th>
+         <th> Modelo</th>
+         <th> Procesador</th>         
+         <th> Disco</th>
+         <th> Pulgadas</th>
+         <th> Precio</th>
+     </tr>
+     </thead>
+{% for c in computadoras %}
+     <tr>
+         <td> {{c.marca}}</td>
+         <td> {{c.modelo}}</td>
+         <td> {{c.procesador}}</td>
+         <td> {{c.disco}}</td>
+         <td> {{c.pulgadas}}</td>
+         <td> {{c.precio}}</td>
+     </tr>
+
+     {% endfor %}   
+    </table>
+
+{% endblock contenido %} 

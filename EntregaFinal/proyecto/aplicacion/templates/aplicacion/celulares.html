@@ -1,0 +1,30 @@
+{% extends 'aplicacion/base.html' %}
+{%load static %}
+
+{% block titulo %}
+    Página de Modelos de celular
+{% endblock titulo %} 
+
+{% block contenido %}
+   <h1> Celulares </h1>
+
+
+   <table class="table table-stripped">
+        <thead>
+        <tr>
+            <th> Marca</th>
+            <th> Modelo</th>
+            <th> Precio</th>
+        </tr>
+        </thead>
+   {% for c in celulares %}
+        <tr>
+            <td> {{c.marca}}</td>
+            <td> {{c.modelo}}</td>
+            <td> {{c.precio}}</td>
+        </tr>
+
+    {% endfor %}   
+    </table>
+
+{% endblock contenido %} 
